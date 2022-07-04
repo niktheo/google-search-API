@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 
 // Create route for results
 app.get('/results', (req, res) => {
-  res.send('This is the Results Page')
+  res.render('results')
 })
 // Catch 404 and forward to error handler
 app.use((req, res, next) => {
