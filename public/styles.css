@@ -1,0 +1,139 @@
+/*global (body)*/
+.searchpage {
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 100%;
+  font-size: 14;
+}
+.results_page {
+  font-family: Helvetica, Arial, sans-serif;
+  width: 100%;
+  top: 0%;
+  position: absolute;
+  margin: 0;
+}
+/*headings */
+/*links*/
+/*forms */
+.search {
+  display: block;
+  margin: auto;
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  border-width: thin;
+  border-radius: 40px;
+  border: #c4c4c4 solid;
+  color: #5b5b5b;
+}
+.but {
+  width: 80px;
+  height: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border-color: #1a5fd0;
+  border-width: thin;
+  background-color: #4285f3;
+  color: white;
+}
+.but:hover {
+  color: #5998ff;
+}
+/*images*/
+.logo {
+  width: 150px;
+  margin-top: 100px;
+}
+/*results*/
+
+/*headings */
+h2 {
+  font-size: 24px;
+}
+/*paragraphs*/
+p {
+  font-size: 14px;
+  color: #5b5b5b;
+}
+/*links*/
+li {
+  display: inline;
+  font-size: 12px;
+}
+ul {
+  padding: 0;
+}
+a {
+  color: #1a0dab;
+}
+
+a:visited {
+  color: #660099;
+}
+/*logo*/
+.logo2 {
+  margin-top: 10px;
+
+  width: 150px;
+}
+.search2 {
+  margin: auto;
+  width: 400px;
+  height: 40px;
+  border-width: thin;
+  border-radius: 40px;
+  border: #c4c4c4 solid;
+  color: #5b5b5b;
+}
+
+.but2 {
+  display: inline;
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #1a5fd0;
+  border-width: thin;
+  background-color: #4285f3;
+  color: white;
+}
+.form2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 400px 80px;
+  grid-column-gap: 30px;
+}
+.navbar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 700px 140px;
+  grid-column-gap: 20px;
+  border-bottom: 2px solid #c4c4c4;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+/*results*/
+.results {
+  color: #5b5b5b;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.firstResult {
+  margin-left: 180px;
+}
+
+nav > div {
+  margin-top: 30px;
+}
+div {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+h2 > a {
+  font-weight: normal;
+  text-decoration: none;
+}
