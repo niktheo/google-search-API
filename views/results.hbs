@@ -11,8 +11,39 @@
         />
       </form>
     </nav>
-    <!-- first result -->
-    <div class="firstResult">
+<div class="firstResult">
+<span class="results">{{results.length}} Results</span>
+
+{{#each results as |result|}}
+
+<div>
+		<small>{{result.url}}</small>
+
+		<h2>
+			<a href="{{result.url}}"
+				>{{result.title}}</a>
+		</h2>
+
+		<p>
+			{{result.description}}
+		</p>
+
+		<ul>
+    		{{#each links as |link|}}
+        		<li><a href="{{link.url}}">{{link.title}}</a></li>
+    		{{/each}}
+		</ul>
+
+{{/each}}
+</div>
+</div>
+
+<!-- ============= -->
+<!-- OLD HTML CODE -->
+<!-- ============= -->
+
+		<!-- first result -->
+    <!-- <div class="firstResult">
       <span class="results">37 Results</span>
       <div>
         <small>www.w3school.com</small>
@@ -38,10 +69,10 @@
             <a href="https://www.w3schools.com/js/">JavaScript Examples</a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- second result -->
-      <div>
+      <!-- <div>
         <small>developer.mozilla.org</small>
 
         <h2>
@@ -64,9 +95,9 @@
             <a href="https://www.w3schools.com/js/">JavaScript Meaning</a>
           </li>
         </ul>
-      </div>
+      </div> -->
       <!-- third result -->
-      <div>
+      <!-- <div>
         <small>en.wikipedia.org</small>
 
         <h2>
@@ -87,4 +118,8 @@
         </ul>
       </div>
     </div>
-	</div>
+	</div> -->
+
+	<!-- ============= -->
+	<!-- OLD HTML CODE -->
+	<!-- ============= -->
