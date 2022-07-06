@@ -12,6 +12,9 @@
       </form>
     </nav>
 <div class="firstResult">
+
+{{#if results.length}}
+
 <span class="results">{{results.length}} Results</span>
 
 {{#each results as |result|}}
@@ -36,6 +39,9 @@
 
 {{/each}}
 </div>
+{{else}}
+    <span class="results">No Results for these terms.</span>
+{{/if}}
 </div>
 
 <!-- ============= -->
