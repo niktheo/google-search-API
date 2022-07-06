@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
 // Create route for search
-app.get('/', require('./controllers/search.js'))
+app.use('/', require('./controllers/search.js'))
 
 // app.get('/', (req, res) => {
 //   res.render('search')
@@ -50,7 +50,7 @@ app.get('/', require('./controllers/search.js'))
 
 // Create route for results
 
-app.get('/results', require('./controllers/results.js'))
+app.use('/results', require('./controllers/results.js'))
 
 // app.get('/results', (req, res) => {
 //   res.render('results')
