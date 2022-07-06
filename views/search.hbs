@@ -2,13 +2,10 @@
 
 
 <img class="logo" src="/img/google.png" alt="" />
-    <form>
-      <input class="search" type="search" />
-      <input
-        class="but"
-        type="button"
-        onclick="location.href='./results.html';"
-        value="Search"
-      />
+    <form action="/results" method="POST">
+      <input class="search" type="search" name="searchTerms" />
+
+			<button class="but">Search</button>
+
     </form>
 </div>
