@@ -20,25 +20,10 @@
 {{#each results as |result|}}
 
 <div>
-		<small>{{result.url}}</small>
-
-		<h2>
-			<a href="{{result.url}}"
-				>{{result.title}}</a>
-		</h2>
-
-		<p>
-			{{result.description}}
-		</p>
-
-		<ul>
-    		{{#each links as |link|}}
-        		<li><a href="{{link.url}}">{{link.title}}</a></li>
-    		{{/each}}
-		</ul>
-
-{{/each}}
+		{{>result result=result}}
 </div>
+{{/each}}
+
 {{else}}
     <span class="results">No Results for these terms.</span>
 {{/if}}
