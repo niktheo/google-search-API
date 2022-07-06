@@ -2,7 +2,7 @@
 const express = require('express')
 const router = express.Router()
 // Create POST controller
-router.get('/results', (req, res) => {
+router.post('/', (req, res) => {
   let results = [
     {
       title: 'JavaScript Tutorial - W3School',
@@ -28,7 +28,7 @@ router.get('/results', (req, res) => {
     {
       title: 'JS tutorials',
       description:
-        'JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.While it is most well-known as scripting language for Web pages<br />CouchDB and AdobeAcrobat',
+        'JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.While it is most well-known as scripting language for Web pages CouchDB and AdobeAcrobat',
       url: 'developer.mozilla.org',
       links: [
         {
@@ -62,7 +62,16 @@ router.get('/results', (req, res) => {
       ]
     }
   ]
-  res.render('results', { results })
+
+  let resultsArray = results.filter(e =>
+    e.description.includes(req.body.searchTerms)
+  )
+  res.render('results', { results: resultsArray })
+  // res.render('results', { results })
+})
+router.get('/', (req, res) => {
+  let resultsarr = []
+  res.render('results', { resultsarr })
 })
 
 // Export module
