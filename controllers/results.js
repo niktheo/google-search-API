@@ -1,6 +1,7 @@
 // Import Packages
 const express = require('express')
 const router = express.Router()
+const Results = require('../models/results.js')
 // Create POST controller
 router.post('/', (req, res) => {
   let results = [
