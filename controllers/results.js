@@ -16,6 +16,8 @@ router.post('/', async (req, res, next) => {
       ]
     })
 
+    res.render('results', { results })
+  } catch (err) {}
 
   // res.render('results', { results })
 })
