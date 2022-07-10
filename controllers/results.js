@@ -11,8 +11,8 @@ router.post('/', async (req, res, next) => {
         { title: { $regex: req.body.searchTerms, $options: 'i' } },
         { url: { $regex: req.body.searchTerms, $options: 'i' } },
         { description: { $regex: req.body.searchTerms, $options: 'i' } },
-        { links: { url: { $regex: req.body.searchTerms, $options: 'i' } } }
-        // { links: [{ title: { $regex: req.body.searchTerms, $options: 'i' } }] }
+        { 'links.title': { $regex: req.body.searchTerms, $options: 'i' } },
+        { 'links.url': { $regex: req.body.searchTerms, $options: 'i' } }
       ]
     })
 
