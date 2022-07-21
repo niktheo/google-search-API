@@ -6,7 +6,7 @@ const router = express.Router()
 // Create here a controller that accepts GET requests and renders the "search" page
 
 router.get('/', (req, res) => {
-  res.render('search')
+  res.json('search')
 })
 
 // Export
