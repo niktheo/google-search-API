@@ -9,6 +9,7 @@ const mongoose = require('mongoose')
 const hbs = require('hbs')
 const hbsUtils = require('hbs-utils')(hbs)
 const methodOverride = require('method-override')
+const cors = require('cors')
 require('dotenv').config()
 
 // Build the App
@@ -30,7 +31,7 @@ app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
-
+app.use(cors())
 // Database
 mongoose.connect(
   process.env.MONGODB_URL,
@@ -70,7 +71,7 @@ app.use((err, req, res, next) => {
   res.locals.hideSearch = true
   // Render the error page
   res.status(err.status || 500)
-  res.render('error')
+  res.json('error')
 })
 
 module.exports = app
